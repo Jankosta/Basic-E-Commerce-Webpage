@@ -6,12 +6,16 @@
         /* Default */
         * {
             background-color: #f9f9f9;
-            margin: 0px;
-            padding: 20px;
         }
 
         body {
             font-family: 'Arial', sans-serif;
+            padding: 20px;
+        }
+
+        /* Hyperlink Style */
+        a {
+            color: red;
         }
 
         /* Title Class */
@@ -19,6 +23,7 @@
             font-family: 'Times New Roman', Times, serif;
             border: 3px solid #ff0000;
             text-align: center;
+            padding: 10px;
         }
 
         /* Style Classes */
@@ -30,11 +35,24 @@
 
 <body>
     <div class="page-title">
-        <h1>Welcome to PhysAssist!</h1>
-        <p>The only app you need to learn physics.</p>
+        <h1 class="underline">Welcome to PhysAssist!</h1>
+
+        <p class="bold">The only app you need to learn physics.</p>
     </div>
 
-    <p>Here is some awesome body text.</p>
+    <div>
+        <h2 class="underline">Our Services</h2>
+
+        <p>PhysAssist is a software designed to help students in learning physics related concepts.<br>Some features offered by PhysAssist include:</p>
+        
+        <ul class="italic">
+            <li>Detailed explanations of physics topics with robust practice tools</li>
+            <li>A community-driven practice question bank where user-uploaded questions may be approved for the official bank</li>
+            <li>Accessible notetaking and navigation for vision-impaired users</li>
+        </ul>
+
+        <a href="https://docs.google.com/document/d/1NZMHl1X05aNs3lgcJQ9w3LDQoe2o0a8zAQ6qohSUkjI/edit?usp=sharing">Click here for a list of more features!</a>
+    </div>
 
 </body>
 </html>
