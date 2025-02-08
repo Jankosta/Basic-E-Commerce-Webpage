@@ -3,13 +3,9 @@
 <head>
     <title>Lab 0</title>
     <style>
-        /* Default */
-        * {
-            background-color: #f9f9f9;
-        }
-
         /* Body Style */
         body {
+            background-color: whitesmoke;
             font-family: 'Arial', sans-serif;
             padding: 20px;
         }
@@ -29,22 +25,60 @@
             width: 100%;
             border-collapse: collapse;
         }
+
         th, td {
-            border: 1px solid maroon;
+            border: 1px solid crimson;
             padding: 10px;
             font-weight: bold;
         }
+
         th {
             background-color: pink;
             text-decoration: underline;
         }
 
-        /* Title Class */
-        .page-title {
+        td {
+            background-color: white;
+        }
+
+        /* Form Style */
+        form {
+            background-color: white;
+            padding: 20px;
+            border: 2px solid crimson;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="password"], textarea, select {
+            width: 98%;
+            padding: 8px;
+            border: 1px solid gray;
+            border-radius: 10px;
+        }
+
+        input[type="submit"], button {
+            background-color: red;
+            color: white;
+            margin-top: 10px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Title Style */
+        #pageTitle {
             font-family: 'Times New Roman', Times, serif;
-            border: 3px solid #ff0000;
+            border: 3px solid crimson;
             text-align: center;
             padding: 10px;
+            background-color: white;
         }
 
         /* Style Classes */
@@ -55,7 +89,7 @@
 </head>
 
 <body>
-    <div class="page-title">
+    <div id="pageTitle">
         <h1 class="underline">Welcome to PhysAssist!</h1>
         <img src="https://scienceforgeorgia.org/wp-content/uploads/2020/08/physics_img.png" alt="Business Logo" style="max-width: 10%; height: auto; filter: hue-rotate(110deg);">
         <p class="bold">The only app you need to learn physics.</p>
@@ -113,6 +147,44 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+
+    <div>
+        <h2>Purchase PhysAssist</h2>
+        <form action="process.php" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+    
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+    
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="4" placeholder="Enter your address"></textarea>
+    
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" placeholder="Enter your phone number">
+    
+            <label for="version">Select a product version</label>
+            <input type="radio" name="version" value="free">PhysAssist Free<br>
+            <input type="radio" name="version" value="pro">PhysAssist Pro<br>
+            <input type="radio" name="version" value="proplus">PhysAssist Pro+<br>
+
+            <label for="describe">Which of these best describes you?</label>
+            <select id="describe" name="describe">
+                <option value="student">Student</option>
+                <option value="parent">Parent</option>
+                <option value="educator">Educator</option>
+                <option value="none">None of the above</option>
+            </select>
+
+            <label for="introduced">Where did you hear about PhysAssist from? (Please select all that apply)</label>
+            <input type="checkbox" name="introduced" value="friend">Friend<br>
+            <input type="checkbox" name="introduced" value="family">Family<br>
+            <input type="checkbox" name="introduced" value="educator">Educator<br>
+            <input type="checkbox" name="introduced" value="ad">Advertisement<br>
+    
+            <input type="submit" value="Submit">
+        </form>
     </div>
 
 </body>
