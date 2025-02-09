@@ -74,6 +74,17 @@
             background-color: red;
             color: white;
             margin-top: 10px;
+            margin-right: 25px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        .clear {
+            background-color: pink;
+            color: black;
+            margin-top: 10px;
             padding: 10px;
             border: none;
             cursor: pointer;
@@ -93,6 +104,7 @@
         .bold { font-weight: bold; }
         .italic { font-style: italic; }
         .underline { text-decoration: underline; }
+        .centered { display: block; text-align: center; }
     </style>
 </head>
 
@@ -100,13 +112,13 @@
     <div id="pageTitle">
         <h1 class="underline">Welcome to PhysAssist!</h1>
         <img src="https://scienceforgeorgia.org/wp-content/uploads/2020/08/physics_img.png" alt="Business Logo" style="max-width: 10%; height: auto; filter: hue-rotate(110deg);">
-        <p class="bold">The only app you need to learn physics.</p>
+        <p class="bold"><i>The only app you need to learn physics.</i></p>
     </div>
 
     <div>
         <h2>Our Services</h2>
 
-        <p>PhysAssist is a software designed to help visually-impaired and blind students in learning physics related concepts. The application is designed with accessibility in mind, and places a focus on allowing these students to participate in class just as any other student would. The PhysAssist team is committed to continually and consistently updating the application with features that further benefit visually-impaired and blind learners across the world. Some features offered by PhysAssist include:</p>
+        <p>PhysAssist is a software designed to help visually-impaired and blind students in learning physics related concepts. The application is designed with accessibility in mind, and places a focus on allowing these students to participate in class just as any other student would. The PhysAssist team is committed to continually and consistently updating the application with features that further benefit visually-impaired and blind learners across the world. <br><u>Some features offered by PhysAssist include:</u></p>
         
         <ul class="italic">
             <li>Detailed explanations of physics topics with robust practice tools</li>
@@ -189,7 +201,7 @@
                     <td style="color: limegreen;">Full Access</td>
                 </tr>
                 <tr>
-                    <td class="underline">AI Pratice Problems</td>
+                    <td class="underline">AI Practice Problems</td>
                     <td style="color: red;">Limited Access</td>
                     <td style="color: orange;">Expanded Access</td>
                     <td style="color: limegreen;">Full Access</td>
@@ -202,24 +214,30 @@
         <h2>Purchase PhysAssist</h2>
         <form action="process.php" method="post">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name">
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
     
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password">
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
     
             <label for="address">Address</label>
-            <textarea id="address" name="address" rows="4" placeholder="Enter your address"></textarea>
+            <textarea id="address" name="address" rows="4" placeholder="Enter your address" required></textarea>
     
             <label for="phone">Phone Number</label>
-            <input type="text" id="phone" name="phone" placeholder="Enter your phone number">
+            <input type="text" id="phone" name="phone" placeholder="XXX-XXX-XXXX" required>
+
+            <label for="phone">Email Address</label>
+            <input type="text" id="email" name="email" placeholder="example@example.com" required>
+
+            <label for="phone">Credit Card Number</label>
+            <input type="text" id="email" name="email" placeholder="XXXX XXXX XXXX XXXX" required>
     
             <label for="version">Select a product version</label>
-            <input type="radio" name="version" value="free">PhysAssist Free<br>
+            <input type="radio" name="version" value="free" required>PhysAssist Free<br>
             <input type="radio" name="version" value="pro">PhysAssist Pro<br>
             <input type="radio" name="version" value="proplus">PhysAssist Pro+<br>
 
             <label for="describe">Which of these best describes you?</label>
-            <select id="describe" name="describe">
+            <select id="describe" name="describe" required>
                 <option value="student">Student</option>
                 <option value="parent">Parent</option>
                 <option value="educator">Educator</option>
@@ -233,8 +251,11 @@
             <input type="checkbox" name="introduced" value="ad">Advertisement<br>
     
             <input type="submit" value="Submit">
+            <button type="reset" class="clear">Clear</button>
         </form>
     </div>
+
+<a href="mailto:group4csce5560@gmail.com" class="centered">Email Us</a>
 
 </body>
 </html>
